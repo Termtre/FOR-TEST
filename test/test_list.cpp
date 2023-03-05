@@ -252,7 +252,7 @@ TEST(List, method_clear_changes_tail_to_nullptr)
     EXPECT_EQ(1, list.isEmpty());
 }
 
-/*TEST(List, method_clear_delete_all_elements) // >><<
+TEST(List, method_clear_delete_all_elements) // >><<
 {
     List<int> list(1);
     list.push_front(2);
@@ -264,9 +264,9 @@ TEST(List, method_clear_changes_tail_to_nullptr)
     array[2] = array[1]->next;
     array[3] = list.end();
     list.clear();
-    for (size_t i = 0; i < 3; i++)
-        EXPECT_NE(array[i]->next, array[i + 1]);
-}*/
+    for (size_t i = 0; i < 4; i++)
+        EXPECT_NE(array[i]->data, 1);
+}
 
 TEST(List, can_use_operator_equal_list_to_itself)
 {
